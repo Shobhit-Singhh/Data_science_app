@@ -102,6 +102,28 @@ def uplode_and_reset():
                 df = pd.read_csv(os.path.join('data','Titanic.csv'))
         st.write("To make the uploaded file visible")
         st.markdown("<hr style='margin: 0.2em 0;'>", unsafe_allow_html=True)
+        st.markdown(
+        """
+        <style>
+            .footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #f1f1f1;
+                padding: 2 px;
+                text-align: center;
+                font-size: 14px;
+                color: #555;
+            }
+        </style>
+        <div class="footer">
+            Data Science App by Shobhit Singh, 
+            <a class="linkedin" href="https://www.linkedin.com/in/shobhit-singhh/" target="_blank">LinkedIn</a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
         return df
 def sidebar(df):
     buffer = io.StringIO()
@@ -112,6 +134,7 @@ def sidebar(df):
                         data=df.to_csv(index=False).encode('utf-8'),
                         file_name='output.csv',
                         key='download_button')
+    
 
 
 def show_dataset_shape(df):
