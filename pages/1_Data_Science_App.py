@@ -28,7 +28,7 @@ from sklearn.neural_network import MLPRegressor
 from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import mean_squared_error, r2_score, accuracy_score, confusion_matrix, classification_report
-# import pygwalker as pyg
+import pygwalker as pyg
 import streamlit.components.v1 as components
 w.filterwarnings("ignore")
 
