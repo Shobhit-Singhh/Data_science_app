@@ -4,30 +4,34 @@ import os
 def main():
     
 
-    st.title("Streamlit Tutorial: 7 Videos")
+    st.title("Analysis Tutorial in 7 Videos")
 
     video_folder = "videos"
     video_files = [
         "1.mp4",
         "2.mp4",
-        "3-1.mp4",
-        "3-2.mp4",
-        "3-3.mp4",
-        "3-4.mp4",
+        "3.mp4",
         "4.mp4",
+        "5.mp4",
+        "6.mp4",
+        "7.mp4",
     ]
 
-    # Sidebar navigation
+    video_dis = [
+        "Data Exploration",
+        "Data Cleaning and Visualization",
+        "Drop Missing Values",
+        "Impute Missing Values",
+        "Outlier Detection",
+        "Feature Encoding and Transformation",
+        "Model Training and Grid Search",
+    ]
     st.sidebar.title("Navigation")
-    selected_video = st.sidebar.radio("Select Video", [f"Video {i}" for i in range(1, 7)])
+    selected_video = st.sidebar.selectbox("Select Video", [f"{i} - {video_dis[i-1]}" for i in range(1,8)])
 
-    # Display selected video
-    video_index = int(selected_video.split()[-1]) - 1
+    video_index = int(selected_video.split()[0])-1
     video_path = os.path.join(video_folder, video_files[video_index])
     st.video(video_path)
-
-    # Custom footer
-    
 
 if __name__ == "__main__":
     st.set_page_config(
@@ -58,3 +62,4 @@ if __name__ == "__main__":
         unsafe_allow_html=True
     )
     main()
+
