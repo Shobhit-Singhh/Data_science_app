@@ -102,7 +102,7 @@ def uplode_and_reset():
                 df = pd.read_csv(os.path.join('data','Titanic.csv'))
         st.write("To make the uploaded file visible")
         st.markdown("<hr style='margin: 0.2em 0;'>", unsafe_allow_html=True)
-        st.markdown(
+        st.sidebar.markdown(
         """
         <style>
             .footer {

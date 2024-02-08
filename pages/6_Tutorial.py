@@ -2,11 +2,7 @@ import streamlit as st
 import os
 
 def main():
-    st.set_page_config(
-        page_title="Streamlit Tutorial: 7 Videos",
-        page_icon="📹",
-        layout="wide"
-    )
+    
 
     st.title("Streamlit Tutorial: 7 Videos")
 
@@ -31,7 +27,15 @@ def main():
     st.video(video_path)
 
     # Custom footer
-    st.markdown(
+    
+
+if __name__ == "__main__":
+    st.set_page_config(
+        page_title="Streamlit Tutorial: 7 Videos",
+        page_icon="📹",
+        layout="wide"
+    )
+    st.sidebar.markdown(
         """
         <style>
             .footer {
@@ -53,6 +57,4 @@ def main():
         """,
         unsafe_allow_html=True
     )
-
-if __name__ == "__main__":
     main()
