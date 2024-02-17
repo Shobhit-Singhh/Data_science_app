@@ -22,7 +22,7 @@ def main():
         "Data Cleaning and Visualization",
         "Drop Missing Values",
         "Impute Missing Values and Outlier Detection",
-        "Feature Encoding"
+        "Feature Encoding",
         "Feature Scaling and Transformation",
         "Model Training and Grid Search",
     ]
