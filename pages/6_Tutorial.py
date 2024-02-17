@@ -21,9 +21,9 @@ def main():
         "Data Exploration",
         "Data Cleaning and Visualization",
         "Drop Missing Values",
-        "Impute Missing Values",
-        "Outlier Detection",
-        "Feature Encoding and Transformation",
+        "Impute Missing Values and Outlier Detection",
+        "Feature Encoding"
+        "Feature Scaling and Transformation",
         "Model Training and Grid Search",
     ]
     st.sidebar.title("Navigation")
